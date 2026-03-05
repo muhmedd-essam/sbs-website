@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>html,body{background:#050505;color:#fff;margin:0}</style>
+  <title>SBS – Step By Step | Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Explore SBS – Step By Step events: workshops, competitions, talks, and camps that shaped our journey over the last years." />
+  <meta name="keywords" content="SBS events, Step By Step, workshops, competitions, camps, talks, student activity" />
+  <meta name="author" content="SBS – Step By Step" />
+  <link rel="icon" type="image/png" href="./SBS LOGO - PNG.png" />
+  <link rel="apple-touch-icon" href="./SBS LOGO - PNG.png" />
+
+  <meta property="og:title" content="SBS – Step By Step" />
+  <meta
+    property="og:description"
+    content="Start your journey step by step. Join SBS to learn, build real projects, and grow with a strong student community."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+   <meta property="og:image" content="./SBS LOGO - PNG.png" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/events.css?v=2" />
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="home.html#home" class="nav-logo">
+        <img src="SBS LOGO - PNG.png" alt="SBS – Step By Step Logo" class="nav-logo-img" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html#home" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link nav-link--active">Events</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="join.html" class="nav-link">Join Us</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section id="top" class="section hero">
+      <div class="hero-bg hero-bg--top"></div>
+      <div class="hero-bg hero-bg--bottom"></div>
+
+      <div class="container hero-inner fade-in">
+        <div class="hero-content">
+          <p class="hero-kicker">SBS EVENTS</p>
+          <h1 class="hero-title">Our Events Journey</h1>
+          <p class="hero-subtitle">
+            Four years of workshops, camps, competitions, and talks designed to push students beyond the classroom.
+          </p>
+
+          <div class="hero-counters">
+            <div class="counter">
+              <span class="counter-number" data-target="120">0</span>
+              <span class="counter-label">Events</span>
+            </div>
+            <div class="counter">
+              <span class="counter-number" data-target="4">0</span>
+              <span class="counter-label">Years</span>
+            </div>
+            <div class="counter">
+              <span class="counter-number" data-target="3000">0</span>
+              <span class="counter-label">Attendees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SPONSORS SLIDER ========== -->
+    <section class="section sponsors">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Partners &amp; Sponsors</h2>
+          <p class="section-subtitle">
+            Organizations that trusted SBS to create meaningful experiences for students.
+          </p>
+        </header>
+
+        <div class="sponsor-slider-wrapper">
+          <div class="sponsor-slider-mask sponsor-slider-mask--left"></div>
+          <div class="sponsor-slider-mask sponsor-slider-mask--right"></div>
+
+          <div class="sponsor-track">
+            <div class="sponsor-logo">
+              <img src="img/Vodafone-Egypt-Logo.png" alt="Vodafone Egypt" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/resala-logo.png" alt="Resala" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/TMG.png" alt="TMG" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/MO GROUP.png" alt="MO Group" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/Youth Scope.png" alt="Youth Scope" />
+            </div>
+            <!-- duplicate for infinite loop -->
+            <div class="sponsor-logo">
+              <img src="img/Vodafone-Egypt-Logo.png" alt="Vodafone Egypt" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/resala-logo.png" alt="Resala" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/TMG.png" alt="TMG" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/MO GROUP.png" alt="MO Group" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="img/Youth Scope.png" alt="Youth Scope" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FILTER + EVENTS GRID ========== -->
+    <section class="section events-grid-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Explore Our Events</h2>
+          <p class="section-subtitle">
+            Filter through SBS events by category and discover the highlights of each season.
+          </p>
+        </header>
+
+        <div class="filter-bar">
+          <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+          <button class="filter-btn" data-filter="competition">Competitions</button>
+          <button class="filter-btn" data-filter="camp">Camps</button>
+          <button class="filter-btn" data-filter="talk">Talks</button>
+        </div>
+
+        <div class="events-grid">
+          <!-- Example event cards -->
+          <article class="event-card" data-category="workshop" data-year="2024">
+            <div class="event-image" style="background-image: url('img/resala event.png');"></div>
+            <div class="event-body">
+              <span class="event-meta">Workshop • 2024</span>
+              <h3 class="event-title">Frontend Launchpad Camp</h3>
+              <p class="event-text">
+                A 3-day intensive frontend workshop where students shipped their first landing pages from scratch.
+              </p>
+              <button
+                class="btn btn-outline event-details-btn"
+                data-title="Frontend Launchpad Camp"
+                data-date="March 2024"
+                data-sponsor="Local Tech Hub"
+                data-description="A focused workshop covering HTML, CSS, and JS fundamentals with mentors from industry and SBS alumni."
+                data-image="img/resala event.png"
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="competition" data-year="2023">
+            <div class="event-image" style="background-image: url('img/confference 2025.jpeg');"></div>
+            <div class="event-body">
+              <span class="event-meta">Competition • 2023</span>
+              <h3 class="event-title">SBS Innovation Challenge</h3>
+              <p class="event-text">
+                Teams competed to pitch and prototype solutions to campus and community problems.
+              </p>
+              <button
+                class="btn btn-outline event-details-btn"
+                data-title="SBS Innovation Challenge"
+                data-date="November 2023"
+                data-sponsor="Innovation Partners"
+                data-description="A full-day challenge with mentors, judging panels, and prizes for the most impactful ideas."
+                data-image="img/confference 2025.jpeg"
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="camp" data-year="2022">
+            <div class="event-image" style="background-image: url('img/closing 2025.jpeg');"></div>
+            <div class="event-body">
+              <span class="event-meta">Camp • 2022</span>
+              <h3 class="event-title">SBS Winter Bootcamp</h3>
+              <p class="event-text">
+                A winter bootcamp blending project work, mentoring, and community‑building activities.
+              </p>
+              <button
+                class="btn btn-outline event-details-btn"
+                data-title="SBS Winter Bootcamp"
+                data-date="January 2022"
+                data-sponsor="Community Sponsors"
+                data-description="Multi-track program where students explored tech, design, and leadership with daily reflections."
+                data-image="img/closing 2025.jpeg"
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="talk" data-year="2025">
+            <div class="event-image" style="background-image: url('img/recruit members.jpeg');"></div>
+            <div class="event-body">
+              <span class="event-meta">Talk • 2025</span>
+              <h3 class="event-title">Careers Beyond Code</h3>
+              <p class="event-text">
+                Industry speakers shared how they built careers at the intersection of tech, business, and design.
+              </p>
+              <button
+                class="btn btn-outline event-details-btn"
+                data-title="Careers Beyond Code"
+                data-date="February 2025"
+                data-sponsor="SBS Alumni Network"
+                data-description="An evening of lightning talks and Q&amp;A sessions with speakers from product, UX, and startup roles."
+                data-image="img/recruit members.jpeg"
+              >
+                View Details
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE (4 YEARS) ========== -->
+    <section class="section section-dark timeline-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Season Timeline</h2>
+          <p class="section-subtitle">
+            A look at how SBS events evolved over the past four years.
+          </p>
+        </header>
+
+        <div class="timeline-wrapper" id="timelineWrapper">
+          <div class="timeline-line">
+            <div class="timeline-line-fill" id="timelineFill"></div>
+          </div>
+
+          <div class="timeline-year-block" data-year="2022">
+            <span class="timeline-year-ghost">2022</span>
+            <div class="timeline-year-card hidden-year">
+              <h3>2022 • Foundations</h3>
+              <p>Launched our first structured camps and trial events to build the SBS culture.</p>
+            </div>
+          </div>
+
+          <div class="timeline-year-block" data-year="2023">
+            <span class="timeline-year-ghost">2023</span>
+            <div class="timeline-year-card hidden-year">
+              <h3>2023 • Expansion</h3>
+              <p>Scaled workshops, introduced competitions, and expanded our mentorship network.</p>
+            </div>
+          </div>
+
+          <div class="timeline-year-block" data-year="2024">
+            <span class="timeline-year-ghost">2024</span>
+            <div class="timeline-year-card hidden-year">
+              <h3>2024 • Specialization</h3>
+              <p>Introduced focused tracks in tech, soft skills, and leadership programs.</p>
+            </div>
+          </div>
+
+          <div class="timeline-year-block" data-year="2025">
+            <span class="timeline-year-ghost">2025</span>
+            <div class="timeline-year-card hidden-year">
+              <h3>2025 • Impact</h3>
+              <p>Delivered flagship events and projects with strong ties to industry and alumni.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="section final-cta">
+      <div class="container final-cta-inner">
+        <div class="final-cta-content">
+          <h2 class="final-cta-title">Ready For The Next Chapter?</h2>
+          <p class="final-cta-text">
+            Be part of the upcoming SBS season, help organize the next wave of events, and grow with a driven community.
+          </p>
+        </div>
+        <a href="join.html" class="btn btn-dark btn-large">Join SBS</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= GLOBAL FOOTER ================= -->
+  <footer class="sbs-footer">
+    <div class="container sbs-footer-inner">
+      <!-- About SBS -->
+      <div class="sbs-footer-col sbs-footer-about">
+        <img
+          src="SBS LOGO - PNG.png"
+          alt="SBS – Step By Step Logo"
+          class="sbs-footer-logo"
+        />
+        <p class="sbs-footer-text">
+          SBS (Step By Step) is a student activity focused on building skills,
+          leadership, and real-world experience through structured programs and events.
+          <em class="sbs-footer-slogan">Step by step, step to success.</em>
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="sbs-footer-col sbs-footer-contact">
+        <h3 class="sbs-footer-title">Contact</h3>
+        <p class="sbs-footer-text">Dokki, Giza, Egypt</p>
+        
+        <p class="sbs-footer-text">
+          Email:
+          <a href="mailto:info@sbs-stepbystep.com" class="sbs-footer-link">
+            info@sbs-stepbystep.com
+          </a>
+        </p>
+        <div class="sbs-footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.302399215964!2d31.204!3d30.044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584588c5e2b7bd%3A0x3b8e00b1a5f0b3ab!2sDokki%2C%20Giza%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="sbs-footer-col sbs-footer-links">
+        <h3 class="sbs-footer-title">Quick Links</h3>
+        <ul class="sbs-footer-links-list">
+          <li><a href="home.html#home" class="sbs-footer-link">Home</a></li>
+          <li><a href="events.html" class="sbs-footer-link">Events</a></li>
+          <li><a href="history.html" class="sbs-footer-link">History</a></li>
+          <li><a href="programs.html" class="sbs-footer-link">Programs</a></li>
+          <li><a href="join.html" class="sbs-footer-link">Join Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="sbs-footer-col sbs-footer-social">
+        <h3 class="sbs-footer-title">Follow Us</h3>
+        <div class="sbs-footer-social-row">
+          <a href="#" class="sbs-footer-social-icon" aria-label="Facebook">F</a>
+          <a href="#" class="sbs-footer-social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="sbs-footer-social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="sbs-footer-social-icon" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sbs-footer-bottom">
+      <div class="container sbs-footer-bottom-inner">
+        <p class="sbs-footer-bottom-text">
+          © <span id="sbs-footer-year">2026</span> SBS – Step By Step. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== EVENT MODAL ========== -->
+  <div class="modal" id="eventModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        ✕
+      </button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-meta" id="modalMeta"></p>
+        <p class="modal-text" id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script>
+    (function () {
+      var span = document.getElementById('sbs-footer-year');
+      if (span) span.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
+

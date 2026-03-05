@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html,
+    body {
+      background: #050505;
+      color: #fff;
+      margin: 0
+    }
+  </style>
+  <title>Solve the Fourth Riddle | SBS – Step By Step</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Solve the fourth riddle – SBS Ramadan Challenge" />
+  <link rel="icon" type="image/png" href="./SBS LOGO - PNG.png" />
+  <link rel="apple-touch-icon" href="./SBS LOGO - PNG.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/home.css?v=2" />
+
+  <style>
+    .riddle-section {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .riddle-box {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .riddle-form {
+      transition: opacity 0.4s ease;
+    }
+
+    .riddle-form.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .riddle-input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .riddle-input:focus {
+      border-color: var(--color-yellow);
+      box-shadow: 0 0 0 2px rgba(255, 255, 1, 0.2);
+    }
+
+    .riddle-input.shake {
+      animation: riddleShake 0.5s ease;
+    }
+
+    @keyframes riddleShake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20%,
+      60% {
+        transform: translateX(-8px);
+      }
+
+      40%,
+      80% {
+        transform: translateX(8px);
+      }
+    }
+
+    .riddle-error {
+      min-height: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #e74c3c;
+    }
+
+    .riddle-success {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .riddle-success.is-visible {
+      opacity: 1;
+    }
+
+    .riddle-success-img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: var(--radius-lg);
+      margin: 1.5rem auto;
+      opacity: 0;
+      transition: opacity 0.6s ease 0.2s;
+    }
+
+    .riddle-success.is-visible .riddle-success-img {
+      opacity: 1;
+    }
+
+    .riddle-success-text {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: right;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--color-muted);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="home.html#home" class="nav-logo">
+        <img src="SBS LOGO - PNG.png" alt="SBS – Step By Step Logo" class="nav-logo-img" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html#home" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="history.html" class="nav-link">History</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="join.html" class="nav-link">Join Us</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section class="section section-dark riddle-section">
+      <div class="container">
+        <div class="riddle-box">
+          <!-- Form -->
+          <form class="riddle-form" id="riddleForm" novalidate>
+            <h1 class="section-title">Solve the Fourth Riddle</h1>
+            <input type="text" class="riddle-input" id="riddleInput" placeholder="Enter your answer..."
+              autocomplete="off" autofocus />
+            <p class="riddle-error" id="riddleError" role="alert" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary btn-large" id="riddleSubmit" disabled>
+              Submit
+            </button>
+          </form>
+
+          <!-- Success (hidden by default) -->
+          <!-- Success content is loaded dynamically from server -->
+          <div class="riddle-success" id="riddleSuccess" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="sbs-footer">
+    <div class="container sbs-footer-inner">
+      <div class="sbs-footer-col sbs-footer-about">
+        <img src="SBS LOGO - PNG.png" alt="SBS – Step By Step Logo" class="sbs-footer-logo" />
+        <p class="sbs-footer-text">
+          SBS (Step By Step) is a student activity focused on building skills,
+          leadership, and real-world experience.
+          <em class="sbs-footer-slogan">Step by step, step to success.</em>
+        </p>
+      </div>
+      <div class="sbs-footer-col sbs-footer-links">
+        <h3 class="sbs-footer-title">Quick Links</h3>
+        <ul class="sbs-footer-links-list">
+          <li><a href="home.html#home" class="sbs-footer-link">Home</a></li>
+          <li><a href="events.html" class="sbs-footer-link">Events</a></li>
+          <li><a href="history.html" class="sbs-footer-link">History</a></li>
+          <li><a href="programs.html" class="sbs-footer-link">Programs</a></li>
+          <li><a href="join.html" class="sbs-footer-link">Join Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sbs-footer-bottom">
+      <div class="container sbs-footer-bottom-inner">
+        <p class="sbs-footer-bottom-text">© <span id="sbs-footer-year">2026</span> SBS – Step By Step. All Rights
+          Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/riddle.js"></script>
+  <script>
+    (function () {
+      var span = document.getElementById("sbs-footer-year");
+      if (span) span.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+
+</html>

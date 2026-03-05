@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <style>html,body{background:#050505;color:#fff;margin:0}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Console Recommendation Test | SBS – Step By Step</title>
+  <meta name="description" content="Discover which SBS Learning Council fits you best. 15-question personality and skills test." />
+  <link rel="icon" type="image/png" href="SBS LOGO - PNG.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/console-test.css?v=2" />
+</head>
+<body>
+  <div class="test-wrap">
+    <!-- Progress bar (visible during questions) -->
+    <div class="progress-wrap" id="progressWrap" aria-hidden="true">
+      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-text" id="progressText">Question 1 of 15</p>
+    </div>
+
+    <!-- Hero / Start screen -->
+    <section class="screen screen-hero active" id="screenHero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">Discover Your Best Fit</h1>
+        <p class="hero-subtitle" lang="ar">اكتشف أنسب كاونسل ليك</p>
+        <p class="hero-desc">A 15-question personality and skills test to recommend the SBS Learning Council that matches you best.</p>
+        <button type="button" class="btn btn-primary" id="startBtn">Start Test</button>
+      </div>
+    </section>
+
+    <!-- Question screen (one question at a time) -->
+    <section class="screen screen-questions" id="screenQuestions" aria-hidden="true">
+      <div class="container question-inner">
+        <div class="question-card" id="questionCard">
+          <h2 class="question-title" id="questionTitleEn"></h2>
+          <p class="question-title-ar" id="questionTitleAr" lang="ar"></p>
+          <div class="options" id="optionsList" role="radiogroup" aria-label="Choose one option"></div>
+          <p class="field-error" id="questionError"></p>
+          <div class="question-actions">
+            <button type="button" class="btn btn-outline" id="prevBtn" aria-label="Previous question">Previous</button>
+            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section class="screen screen-result" id="screenResult" aria-hidden="true">
+      <div class="container result-inner">
+        <div class="result-card" id="resultCard">
+          <p class="result-kicker">Your Recommended Council</p>
+          <h2 class="result-title" id="resultTitle"></h2>
+          <p class="result-title-ar" id="resultTitleAr" lang="ar"></p>
+          <p class="result-explanation" id="resultExplanation"></p>
+          <p class="result-description" id="resultDescription"></p>
+          <a href="join.html" class="btn btn-primary btn-apply" id="applyBtn">Apply to This Council</a>
+          <button type="button" class="btn btn-outline btn-retake" id="retakeBtn">Retake Test</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/console-test.js"></script>
+</body>
+</html>

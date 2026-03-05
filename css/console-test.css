@@ -1,0 +1,405 @@
+/* ============================================================
+   SBS Console Recommendation Test – Styles
+   Brand: Black, #ffff01 accent, white typography
+   v1.2
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050505;
+  --bg-alt: #111111;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --yellow: #ffff01;
+  --yellow-soft: rgba(255, 255, 1, 0.18);
+  --radius: 12px;
+  --radius-sm: 10px;
+  --transition: 0.3s ease;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.test-wrap {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: min(560px, 100% - 1.5rem);
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+/* ============== Progress bar ============== */
+.progress-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.progress-wrap.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--yellow), rgba(255, 255, 1, 0.7));
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ============== Screens (shared) ============== */
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ============== Hero / Start ============== */
+.screen-hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--yellow-soft), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+}
+
+.hero-title {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.hero-desc {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #e6e600;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 1, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+/* ============== Question screen ============== */
+.screen-questions .question-inner {
+  width: 100%;
+}
+
+.question-card {
+  background: var(--bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow);
+  animation: cardIn 0.4s ease;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.question-title-ar {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--yellow);
+  direction: rtl;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), transform 0.2s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--yellow-soft);
+}
+
+.option:focus-visible {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px var(--yellow-soft);
+}
+
+.option.selected {
+  border-color: var(--yellow);
+  background: rgba(255, 255, 1, 0.08);
+  box-shadow: 0 0 0 1px var(--yellow);
+}
+
+.option-label-en {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.option-label-ar {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  direction: rtl;
+}
+
+.field-error {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: #ff6b6b;
+  min-height: 1.4em;
+}
+
+.question-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.question-actions .btn {
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+#prevBtn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============== Result screen ============== */
+.screen-result .result-inner {
+  width: 100%;
+}
+
+.result-card {
+  background: var(--bg-alt);
+  border: 2px solid var(--yellow);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow), 0 0 30px rgba(255, 255, 1, 0.08);
+  animation: resultIn 0.6s ease;
+}
+
+@keyframes resultIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.result-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--yellow);
+}
+
+.result-title {
+  margin: 0 0 0.2rem;
+  font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+  font-weight: 700;
+}
+
+.result-title-ar {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  color: var(--yellow);
+  direction: rtl;
+}
+
+.result-explanation {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.result-description {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.btn-apply {
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-retake {
+  background: transparent;
+}
+
+/* ============== Responsive ============== */
+@media (max-width: 600px) {
+  .screen {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .question-card,
+  .result-card {
+    padding: 1.1rem 1.2rem;
+  }
+
+  .question-actions {
+    flex-direction: column;
+  }
+
+  .question-actions .btn {
+    width: 100%;
+  }
+
+  .btn-apply,
+  .btn-retake {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <style>html,body{background:#050505;color:#fff;margin:0}</style>
+  <title>SBS – Step By Step</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicon / Logo in head -->
+  <link rel="icon" type="image/png" href="./SBS LOGO - PNG.png" />
+  <link rel="apple-touch-icon" href="./SBS LOGO - PNG.png" />
+  <meta
+    name="description"
+    content="SBS – Step By Step is a student activity that helps you grow your skills, gain real experience, and join a driven community through workshops, projects, and leadership opportunities."
+  />
+  <meta name="keywords" content="SBS, Step By Step, student activity, workshops, projects, leadership, community" />
+  <meta name="author" content="SBS – Step By Step" />
+  <meta property="og:title" content="SBS – Step By Step" />
+  <meta
+    property="og:description"
+    content="Start your journey step by step. Join SBS to learn, build real projects, and grow with a strong student community."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+   <meta property="og:image" content="./SBS LOGO - PNG.png" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            sbsYellow: '#ffff01',   // brand yellow
+            sbsBlack: '#050505',
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(0,0,0,0.45)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #050505;
+      color: #ffffff;
+    }
+
+    /* Stepped yellow corner inspired by the SBS logo */
+    .sbs-corner-step {
+      background: #ffff01;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 35%,
+        65% 35%,
+        65% 100%,
+        0 100%
+      );
+      -webkit-clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 35%,
+        65% 35%,
+        65% 100%,
+        0 100%
+      );
+    }
+
+    /* Simple page intro animation */
+    .page-enter {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .page-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .loader-fade-out {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 500ms ease;
+    }
+
+    /* Loader progress bar animation (2.5 seconds) */
+    .sbs-loader-bar {
+      width: 0;
+      animation: sbsLoaderFill 2.5s ease-in-out forwards;
+    }
+
+    @keyframes sbsLoaderFill {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-sbsBlack text-white antialiased overflow-x-hidden">
+  <!-- Initial loading overlay -->
+  <div id="sbs-loader" class="fixed inset-0 z-50 flex items-center justify-center bg-sbsBlack">
+    <div class="flex flex-col items-center gap-4">
+      <div class="flex items-center gap-3">
+        <img
+          src="./SBS LOGO - PNG.png"
+          alt="SBS – Step By Step"
+          class="h-16 w-auto sm:h-20 object-contain"
+        />
+      </div>
+      <div class="h-1.5 w-32 sm:w-40 rounded-full bg-white/10 overflow-hidden">
+        <div class="h-full rounded-full bg-sbsYellow sbs-loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page wrapper -->
+  <div id="sbs-page" class="min-h-screen flex flex-col page-enter">
+
+    <!-- HERO SECTION -->
+    <section id="top" class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 sm:px-10 lg:px-20 py-6 sm:py-10">
+      <!-- Background decorative yellow corner shapes -->
+      <div class="pointer-events-none absolute inset-0">
+        <!-- top right corner (PNG as background to scale proportionally) -->
+        <div
+          class="absolute -top-10 right-6 sm:right-16 w-32 h-32 sm:w-44 sm:h-44 bg-no-repeat bg-contain"
+          style="background-image: url('./1770815212351.png');"
+        ></div>
+        <!-- bottom left corner (flipped) -->
+        <div
+          class="absolute bottom-0 -left-12 w-32 h-32 sm:w-44 sm:h-44 rotate-180 opacity-90 bg-no-repeat bg-contain"
+          style="background-image: url('./1770815212351.png');"
+        ></div>
+        <!-- subtle gradient glow -->
+        <div class="absolute -bottom-32 right-0 w-72 h-72 bg-sbsYellow/20 blur-3xl rounded-full"></div>
+      </div>
+
+      <!-- Content container -->
+      <div class="relative z-10 w-full max-w-6xl">
+        <!-- Logo row -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img
+              src="./SBS LOGO - PNG.png"
+              alt="SBS – Step By Step Logo"
+              class="h-24 w-auto sm:h-32 object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Hero main grid -->
+        <div class="mt-14 sm:mt-20 grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] items-center">
+          <!-- Text block -->
+          <div>
+            <p class="uppercase tracking-[0.28em] text-xs sm:text-sm text-sbsYellow mb-4">
+              Student Activity • Step By Step
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight sm:leading-[1.15]">
+              Start Your Journey<br />
+              <span class="text-sbsYellow">Step By Step</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-sm sm:text-base text-gray-200/80">
+              Grow academically, professionally, and personally with SBS.
+              Join workshops, real projects, and a community that pushes you
+              to take the next step—one at a time.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="home.html"
+                class="inline-flex items-center justify-center rounded-full bg-sbsYellow px-8 py-3 text-sm sm:text-base font-semibold text-black shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_55px_rgba(0,0,0,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-sbsYellow/70 focus-visible:ring-offset-2 focus-visible:ring-offset-sbsBlack"
+              >
+                Apply Now
+              </a>
+              <a
+                href="#about"
+                class="inline-flex items-center justify-center rounded-full border border-white/40 bg-transparent px-8 py-3 text-sm sm:text-base font-medium text-white transition-all duration-200 hover:bg-white hover:text-black hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-sbsYellow/80 focus-visible:ring-offset-2 focus-visible:ring-offset-sbsBlack"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <!-- Small supporting line -->
+            <div class="mt-6 flex items-center gap-3 text-xs sm:text-sm text-gray-400">
+              <span class="inline-block h-[1px] w-10 bg-gray-500"></span>
+              <span>Limited spots per intake • Open for motivated students</span>
+            </div>
+          </div>
+
+          <!-- Visual / hero reference area -->
+          <div class="relative">
+            <div class="rounded-3xl border border-white/5 bg-gradient-to-br from-white/5 via-white/[0.02] to-transparent p-[1px] shadow-soft backdrop-blur">
+              <div class="relative overflow-hidden rounded-3xl bg-black">
+                <!-- yellow corner overlay inside card -->
+                <div class="absolute -top-4 -right-4 w-16 h-16 sbs-corner-step opacity-90"></div>
+                <div class="relative p-6 sm:p-8">
+                  <p class="text-xs uppercase tracking-[0.25em] text-sbsYellow">SBS</p>
+                  <p class="mt-4 text-lg sm:text-xl font-semibold">
+                    Turn your ideas into real, high‑impact projects.
+                  </p>
+                  <p class="mt-3 text-sm text-gray-300">
+                    Work with teams, attend workshops, and ship initiatives that matter.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3 text-[11px] sm:text-xs">
+                    <span class="rounded-full bg-white/5 px-3 py-1 border border-white/10">
+                      Project-based Learning
+                    </span>
+                    <span class="rounded-full bg-white/5 px-3 py-1 border border-white/10">
+                      Mentorship
+                    </span>
+                    <span class="rounded-full bg-white/5 px-3 py-1 border border-white/10">
+                      Growth Mindset
+                    </span>
+                  </div>
+                  <!-- reference hero image -->
+                  <div class="mt-6">
+                    <img
+                      src="./WhatsApp Image 2026-02-11 at 15.15.35.jpeg"
+                      alt="SBS Hero Reference"
+                      class="w-full rounded-2xl object-cover border border-white/10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20">
+      <!-- subtle divider -->
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 sm:mb-12">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sbsYellow">
+              About SBS
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold">
+              Learn, build, and grow with purpose.
+            </h2>
+          </div>
+          <p class="max-w-xl text-sm sm:text-base text-gray-300">
+            SBS – Step By Step is a student activity designed to give you real skills,
+            practical exposure, and a network of driven peers. Every step is focused
+            on helping you move closer to who you want to become.
+          </p>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid gap-6 sm:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-7 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="absolute -top-5 -left-5 w-12 h-12 sbs-corner-step opacity-80 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <h3 class="text-lg font-semibold mb-2 mt-4">Skill Development</h3>
+            <p class="text-sm text-gray-300">
+              Hands-on workshops, sessions, and mentorship to build high-value
+              skills in communication, tech, and problem solving.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-7 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="absolute -top-5 -left-5 w-12 h-12 sbs-corner-step opacity-80 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <h3 class="text-lg font-semibold mb-2 mt-4">Real Experience</h3>
+            <p class="text-sm text-gray-300">
+              Work on real initiatives, events, and projects that simulate
+              startup-like environments and real-world execution.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-7 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="absolute -top-5 -left-5 w-12 h-12 sbs-corner-step opacity-80 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <h3 class="text-lg font-semibold mb-2 mt-4">Community</h3>
+            <p class="text-sm text-gray-300">
+              Surround yourself with ambitious students who want to build, grow,
+              and push each other forward step by step.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY JOIN SECTION -->
+    <section id="why" class="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 sm:mb-12">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sbsYellow">
+              Why Join SBS
+            </p>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-semibold">
+              Built for students who want more.
+            </h2>
+          </div>
+          <p class="max-w-xl text-sm sm:text-base text-gray-300">
+            SBS is not just another club. It is your launchpad to real
+            opportunities, meaningful collaborations, and a portfolio of work
+            you can proudly share.
+          </p>
+        </div>
+
+        <!-- Benefit cards -->
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Benefit 1 -->
+          <article class="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-6 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-base font-semibold">Networking</h3>
+              <span class="h-6 w-6 rounded-lg bg-sbsYellow/90 text-[10px] flex items-center justify-center font-semibold text-black">
+                01
+              </span>
+            </div>
+            <p class="text-sm text-gray-300">
+              Connect with speakers, mentors, alumni, and students from
+              different backgrounds and majors.
+            </p>
+          </article>
+
+          <!-- Benefit 2 -->
+          <article class="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-6 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-base font-semibold">Leadership Opportunities</h3>
+              <span class="h-6 w-6 rounded-lg bg-sbsYellow/90 text-[10px] flex items-center justify-center font-semibold text-black">
+                02
+              </span>
+            </div>
+            <p class="text-sm text-gray-300">
+              Take ownership of teams, tracks, and events to grow your
+              leadership and decision‑making skills.
+            </p>
+          </article>
+
+          <!-- Benefit 3 -->
+          <article class="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-6 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-base font-semibold">Real Projects</h3>
+              <span class="h-6 w-6 rounded-lg bg-sbsYellow/90 text-[10px] flex items-center justify-center font-semibold text-black">
+                03
+              </span>
+            </div>
+            <p class="text-sm text-gray-300">
+              Work on campaigns, events, and initiatives that mirror how real
+              startups operate and grow.
+            </p>
+          </article>
+
+          <!-- Benefit 4 -->
+          <article class="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-5 sm:p-6 transition-all duration-200 hover:-translate-y-1 hover:border-sbsYellow/70 hover:bg-white/[0.05]">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-base font-semibold">Certificates</h3>
+              <span class="h-6 w-6 rounded-lg bg-sbsYellow/90 text-[10px] flex items-center justify-center font-semibold text-black">
+                04
+              </span>
+            </div>
+            <p class="text-sm text-gray-300">
+              Gain recognition through certificates and documented
+              contributions that strengthen your CV and portfolio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section id="apply" class="relative bg-sbsYellow text-black py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20">
+      <!-- decorative corner in black -->
+      <div class="absolute -top-10 right-6 sm:right-20 w-24 h-24 bg-black/95 overflow-hidden">
+        <div
+          class="absolute inset-2 bg-no-repeat bg-contain"
+          style="background-image: url('./1770815212351.png');"
+        ></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-black/60">
+          Final Call
+        </p>
+        <h2 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
+          Ready to take the next step?
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-black/80">
+          Join SBS – Step By Step and start building the version of yourself you’ve
+          always imagined. One decision can change the direction of your journey.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="home.html"
+            class="inline-flex items-center justify-center rounded-full bg-black px-10 py-3.5 text-sm sm:text-base font-semibold text-sbsYellow shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_55px_rgba(0,0,0,0.75)] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/80 focus-visible:ring-offset-2 focus-visible:ring-offset-sbsYellow"
+          >
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal footer -->
+    <footer class="bg-sbsBlack py-6 px-6 sm:px-10 lg:px-20 text-xs sm:text-sm text-gray-500 border-t border-white/5">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span>© <span id="year"></span> SBS – Step By Step. All rights reserved.</span>
+        <span class="text-gray-500/80">Designed for students who move forward, step by step.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Small script for dynamic year (optional) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple intro + loader animation
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('sbs-loader');
+      const page = document.getElementById('sbs-page');
+
+      if (page) {
+        // trigger page content fade-in
+        requestAnimationFrame(() => {
+          page.classList.add('page-enter-active');
+        });
+      }
+
+      if (loader) {
+        // keep loader visible for ~2.5 seconds so bar can complete
+        setTimeout(() => {
+          loader.classList.add('loader-fade-out');
+        }, 2500);
+      }
+    });
+  </script>
+  
+</body>
+</html>
